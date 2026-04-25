@@ -19,3 +19,5 @@ basket.addEventListener("click", () => {
     basketScene.style.display = "none";
   });
 });
+
+//add key inside apple -> unlock door at end
