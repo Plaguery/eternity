@@ -7,3 +7,15 @@ balloons.addEventListener("click", () => {
 
 document.cookie = "username=John Doe";
 console.log(document.cookie);
+
+const basket = document.querySelector("#basket");
+basket.addEventListener("click", () => {
+  console.log("hi");
+  const basketScene = document.querySelector("#basketCloseUp");
+  basketScene.style.display = "block";
+
+  const exitBasket = document.querySelector("#exitBasket");
+  exitBasket.addEventListener("click", () => {
+    basketScene.style.display = "none";
+  });
+});

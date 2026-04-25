@@ -9,3 +9,37 @@ body {
   top: 40%;
   padding: 20px 10px;
 }
+
+#swing {
+  position: absolute;
+  left: 20%;
+  top: 45%;
+  padding: 100px 100px;
+}
+
+#basketCloseUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+#basketCloseUp img {
+  height: 100%;
+  width: 100%;
+}
+
+#exitBasket {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#appleCloseUp {
+  position: fixed;
+  bottom: 30%;
+  left: 45%;
+  padding: 100px 110px;
+}
