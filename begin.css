@@ -1,0 +1,11 @@
+body {
+  background-image: url("assets/level_1.png");
+  background-size: cover;
+}
+
+#balloons {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  padding: 20px 10px;
+}
