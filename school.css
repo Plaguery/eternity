@@ -1,7 +1,34 @@
 body {
   background-image: url(assets/2_bg.png);
 }
+button {
+  background-color: aliceblue;
+  padding: 5px;
+}
 
+#lock {
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+}
+
+#hint1 {
+  position: absolute;
+  right: 20%;
+  top: 30%;
+}
+
+#hint2 {
+  position: absolute;
+}
+
+#hint3 {
+  position: absolute;
+}
+
+#hint4 {
+  position: absolute;
+}
 #bookCloseUp {
   display: none;
 }
@@ -10,4 +37,8 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
+}
+
+#comboLock {
+  display: none;
 }

@@ -10,7 +10,23 @@
     <script type="module" src="school.js" defer></script>
   </head>
   <body>
-    <div id="comboLock">
+    <button id="lock">locked</button>
+
+    <button id="notebook">click me</button>
+    <button id="hint1">hint 1</button>
+    <button id="hint2">hint 2</button>
+    <button id="hint3">hint 3</button>
+    <button id="hint4">hint 4</button>
+    <section id="inventory">
+      <button><a href="office.html">NEXT</a></button>
+    </section>
+
+    <div class="closeUp" id="bookCloseUp">
+      <img src="assets/2_bookcloseup.png" />
+      <button class="navButton" id="exitBook">BACK</button>
+    </div>
+
+    <div class="closeUp" id="comboLock">
       <input id="combo1" type="number" min="0" max="9" value="0" /><input
         id="combo2"
         type="number"
@@ -19,15 +35,7 @@
         value="0"
       /><input id="combo3" type="number" min="0" max="9" value="0" />
       <button id="submitCombo">submit</button>
-    </div>
-    <button id="notebook">click me</button>
-    <section id="inventory">
-      <button><a href="office.html">NEXT</a></button>
-    </section>
-
-    <div class="closeUp" id="bookCloseUp">
-      <img src="assets/2_bookcloseup.png" />
-      <button class="navButton" id="exitBook">BACK</button>
+      <button class="navButton" id="exitLock">BACK</button>
     </div>
   </body>
 </html>

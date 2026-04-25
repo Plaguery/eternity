@@ -1,4 +1,4 @@
-import { refreshInv, showDialogue } from "./util.js";
+import { refreshInv, showDialogue, closeUp } from "./util.js";
 
 const dialog = document.querySelector("#dialog");
 const dialogText = document.querySelector("#dialogText");
@@ -32,14 +32,9 @@ swings.addEventListener("click", () => {
 const basket = document.querySelector("#basket");
 basket.addEventListener("click", () => {
   const basketScene = document.querySelector("#basketCloseUp");
-  basketScene.style.display = "block";
-
-  showDialogue(["Ooh, an apple!"], dialog, dialogText);
-
   const exitBasket = document.querySelector("#exitBasket");
-  exitBasket.addEventListener("click", () => {
-    basketScene.style.display = "none";
-  });
+  closeUp(basketScene, exitBasket);
+  showDialogue(["Ooh, an apple!"], dialog, dialogText);
 });
 
 const horse = document.querySelector("#horse");

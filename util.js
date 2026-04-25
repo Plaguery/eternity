@@ -1,3 +1,10 @@
+export function getCookies() {
+  return document.cookie.split("; ").reduce((prev, current) => {
+    const [name, ...value] = current.split("=");
+    prev[name] = decodeURIComponent(value.join("="));
+    return prev;
+  }, {});
+}
 export function refreshInv() {
   const inv = [
     { name: "key", src: "assets/key.png" },
@@ -6,12 +13,7 @@ export function refreshInv() {
 
   const inventory = document.querySelector("#inventory");
   console.log(inventory);
-
-  const cookies = document.cookie.split("; ").reduce((prev, current) => {
-    const [name, ...value] = current.split("=");
-    prev[name] = decodeURIComponent(value.join("="));
-    return prev;
-  }, {});
+  const cookies = getCookies();
 
   for (const i of inv) {
     if (cookies[i.name]) {
@@ -37,5 +39,12 @@ export function showDialogue(dialogTextList, dialog, dialogText) {
     }
     dialogText.innerHTML = dialogTextList[dialogIndex];
     dialogIndex++;
+  });
+}
+
+export function closeUp(scene, backButton) {
+  scene.style.display = "block";
+  backButton.addEventListener("click", () => {
+    scene.style.display = "none";
   });
 }
