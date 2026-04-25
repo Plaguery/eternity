@@ -1,4 +1,17 @@
-import { refreshInv } from "./util.js";
+import { refreshInv, showDialogue } from "./util.js";
+
+const dialog = document.querySelector("#dialog");
+const dialogText = document.querySelector("#dialogText");
+refreshInv();
+showDialogue(
+  [
+    "You wake up in a strange place.",
+    "Everything feels familiar, yet you're certain you've never been here before.",
+    "You decide to look around.",
+  ],
+  dialog,
+  dialogText,
+);
 
 var balloonNum = 4;
 const balloons = document.querySelector("#balloons");
@@ -7,10 +20,21 @@ balloons.addEventListener("click", () => {
   balloonNum -= 1;
 });
 
+const swings = document.querySelector("#swing");
+swings.addEventListener("click", () => {
+  showDialogue(
+    ["You sit and swing for a while.", "That was fun."],
+    dialog,
+    dialogText,
+  );
+});
+
 const basket = document.querySelector("#basket");
 basket.addEventListener("click", () => {
   const basketScene = document.querySelector("#basketCloseUp");
   basketScene.style.display = "block";
+
+  showDialogue(["Ooh, an apple!"], dialog, dialogText);
 
   const exitBasket = document.querySelector("#exitBasket");
   exitBasket.addEventListener("click", () => {
@@ -18,10 +42,19 @@ basket.addEventListener("click", () => {
   });
 });
 
+const horse = document.querySelector("#horse");
+horse.addEventListener("click", function clickHorse() {
+  var index = 0;
+  const horseDialogue = ["You sit on the horse.", "Neigh."];
+  showDialogue(horseDialogue, dialog, dialogText);
+});
+
 const appleButton = document.querySelector("#appleCloseUp");
 const apple = appleButton.firstChild;
 var bites = 3;
 appleButton.addEventListener("click", function bite() {
+  const audio = new Audio("music/apple.mp3");
+  audio.play();
   switch (bites) {
     case 3:
       apple.setAttribute("src", "assets/1_apple2.png");
@@ -34,25 +67,11 @@ appleButton.addEventListener("click", function bite() {
       break;
     case 0:
       apple.setAttribute("src", "assets/1_apple5.png");
-      alert("Item collected!");
+      showDialogue(["Item collected!"], dialog, dialogText);
       document.cookie = "key=true";
       removeEventListener("click", bite);
       appleButton.style.pointerEvents = "none";
       break;
   }
   bites -= 1;
-});
-
-refreshInv();
-var dialogIndex = 0;
-const dialogTextList = ["*You wake up in a strange place.*", "hello"];
-const dialog = document.querySelector("#dialog");
-const dialogText = document.querySelector("#dialogText");
-dialog.showModal();
-dialog.addEventListener("click", () => {
-  if (dialogIndex >= dialogTextList.length) {
-    dialog.close();
-  }
-  dialogText.innerHTML = dialogTextList[dialogIndex];
-  dialogIndex++;
 });

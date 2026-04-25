@@ -24,3 +24,18 @@ export function refreshInv() {
     }
   }
 }
+
+export function showDialogue(dialogTextList, dialog, dialogText) {
+  var dialogIndex = 1;
+  dialogText.innerHTML = dialogTextList[0];
+  dialog.showModal();
+  dialog.addEventListener("click", function advanceDialog() {
+    if (dialogIndex >= dialogTextList.length) {
+      dialog.close();
+      console.log("Index:" + dialogIndex);
+      dialog.removeEventListener("click", advanceDialog);
+    }
+    dialogText.innerHTML = dialogTextList[dialogIndex];
+    dialogIndex++;
+  });
+}
