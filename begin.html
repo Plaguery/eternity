@@ -7,26 +7,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="begin.js" defer></script>
+    <script type="module" src="begin.js" defer></script>
   </head>
   <body>
-    <button id="balloons">balloon</button>
-    <button id="test"></button>
-    <button id="swing">swing</button>
-    <button id="basket">basket</button>
+    <button id="horse"><img src="assets/1_horse.png" /></button>
+    <button id="swing"><img src="assets\1_swings.png" /></button>
+    <div id="tableCont">
+      <button id="balloons"><img src="assets/1_balloons.png" /></button>
+      <button id="basket"><img src="assets/1_basket.png" /></button>
+      <img id="table" src="assets/1_table.png" />
+    </div>
 
     <section id="inventory">
-      <div class="invItem">a</div>
-      <div class="invItem">a</div>
-      <div class="invItem">a</div>
-      <div class="invItem">bb</div>
-      <button><a href="school.html">NEXT</a></button>
+      <button class="navButton"><a href="school.html">NEXT</a></button>
     </section>
 
-    <div id="basketCloseUp">
-      <img src="assets\level_1_apple.png" />
-      <button id="exitBasket">BACK</button>
-      <button id="appleCloseUp">apple</button>
+    <div class="closeUp" id="basketCloseUp">
+      <img src="assets/1_closeup.png" />
+      <button class="navButton" id="exitBasket">BACK</button>
+      <button id="appleCloseUp"><img src="assets/1_apple.png" /></button>
     </div>
   </body>
 </html>

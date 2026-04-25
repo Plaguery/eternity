@@ -7,16 +7,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="begin.js" defer></script>
+    <script type="module" src="school.js" defer></script>
   </head>
   <body>
-    <input type="number" max="999" />
+    <div id="comboLock">
+      <input id="combo1" type="number" min="0" max="9" value="0" /><input
+        id="combo2"
+        type="number"
+        min="0"
+        max="9"
+        value="0"
+      /><input id="combo3" type="number" min="0" max="9" value="0" />
+      <button id="submitCombo">submit</button>
+    </div>
+    <button id="notebook">click me</button>
     <section id="inventory">
-      <div class="invItem">a</div>
-      <div class="invItem">a</div>
-      <div class="invItem">a</div>
-      <div class="invItem">bb</div>
       <button><a href="office.html">NEXT</a></button>
     </section>
+
+    <div class="closeUp" id="bookCloseUp">
+      <img src="assets/2_bookcloseup.png" />
+      <button class="navButton" id="exitBook">BACK</button>
+    </div>
   </body>
 </html>

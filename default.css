@@ -4,7 +4,10 @@ body {
 }
 button {
   opacity: 100%;
-
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
   background-color: transparent;
   transition: all 1s;
   transform: scale(1);
@@ -12,11 +15,14 @@ button {
 
 button:hover {
   opacity: 100%;
-  transition: all 1s;
-  transform: scale(1.05);
+  transition: all 0.5s;
+  transform: scale(1.01);
 }
 
 .invItem {
+  background-color: rgb(219, 12, 81);
+  margin: 10px;
+  padding: 40px;
 }
 
 #inventory {
@@ -24,4 +30,23 @@ button:hover {
   bottom: 0;
   display: flex;
   flex-direction: row;
+}
+
+.navButton {
+  padding: 20px;
+  width: fit;
+  background-color: antiquewhite;
+}
+
+.closeUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.closeUp img {
+  height: 100%;
+  width: 100%;
 }

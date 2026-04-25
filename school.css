@@ -1,0 +1,9 @@
+#bookCloseUp {
+  display: none;
+}
+
+#exitBook {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

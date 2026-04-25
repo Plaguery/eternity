@@ -1,34 +1,44 @@
 body {
-  background-image: url("assets/level_1.png");
+  background-image: url("assets/1_shadows.png"), url("assets/1_bg.png");
   background-size: cover;
 }
 
 #balloons {
   position: absolute;
-  left: 50%;
-  top: 40%;
-  padding: 20px 10px;
+  left: 80%;
+  top: -175%;
 }
 
 #swing {
   position: absolute;
+  left: 15%;
+  top: 43%;
+}
+
+#swing img {
+  height: 30vh;
+}
+
+#tableCont {
+  position: absolute;
+  left: 46%;
+  top: 57%;
+}
+#table {
+  height: 10vh;
+}
+#basket {
+  position: absolute;
   left: 20%;
-  top: 45%;
-  padding: 100px 100px;
+  top: -40%;
+}
+
+#basket img {
+  height: 6vh;
 }
 
 #basketCloseUp {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
   display: none;
-}
-
-#basketCloseUp img {
-  height: 100%;
-  width: 100%;
 }
 
 #exitBasket {
@@ -41,5 +51,4 @@ body {
   position: fixed;
   bottom: 30%;
   left: 45%;
-  padding: 100px 110px;
 }
