@@ -35,7 +35,7 @@ lock.addEventListener(
       [
         "You attempt to open the cabinet.",
         "It's locked.",
-        "Looks like you need to find a 3 digit code.",
+        "Looks like you need to find a 4 digit code.",
       ],
       dialog,
       dialogText,
@@ -51,11 +51,12 @@ lock.addEventListener("click", () => {
 
 submit.addEventListener("click", () => {
   var code = "";
-  var comboBox = combo.children;
+  var comboBox = document.querySelector("#vals").children;
+  console.log(comboBox);
   for (var i = 0; i < 4; i++) {
     code += comboBox[i].value;
   }
-  if (code == "4622") {
+  if (code == "4025") {
     console.log("got it");
     showDialogue(
       [
@@ -75,6 +76,7 @@ submit.addEventListener("click", () => {
       dialogText,
     );
   }
+  refreshInv();
 });
 
 //event listeners - pop up hints on click
@@ -88,7 +90,7 @@ hint1.addEventListener("click", () => {
 const hint2 = document.querySelector("#hint2");
 const hint2Up = document.querySelector("#hint2Up");
 hint2.addEventListener("click", () => {
-  closeUp(hint1Up, document.querySelector("#exitH2"));
+  closeUp(hint2Up, document.querySelector("#exitH2"));
 });
 
 const hint3 = document.querySelector("#hint3");

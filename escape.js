@@ -5,11 +5,11 @@ const dialogText = document.querySelector("#dialogText");
 
 showDialogue(
   [
-    "Suddenly, everything flashes.",
-    "Your vision goes black.",
-    "When you come to, you find yourself staring up at the ceiling.",
+    "When you come to, you find yourself staring up at the sky.",
     "...",
     "What just happened?",
+    "Was any of it real?",
+    "YOU ESCAPED: TRUE ENDING",
   ],
   dialog,
   dialogText,

@@ -1,0 +1,23 @@
+body {
+  background-image: url("assets/3_bg.png");
+}
+
+#wire {
+  position: absolute;
+  top: 55%;
+  left: 07%;
+}
+
+#wire img {
+  width: 82%;
+}
+
+#white {
+  display: none;
+}
+
+#white * {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}

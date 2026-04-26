@@ -69,6 +69,28 @@ button {
   display: none;
 }
 
+#lockinput {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#vals {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 10px;
+}
+
+#vals * {
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #hint1Up,
 #hint2Up,
 #hint3Up,

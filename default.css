@@ -4,6 +4,7 @@ body {
   aspect-ratio: 8/5;
   background-size: cover;
   aspect-ratio: 8/5;
+  background-repeat: no-repeat;
 }
 button {
   opacity: 100%;
@@ -49,8 +50,7 @@ button:hover {
 }
 
 .navButton {
-  width: fit;
-  background-color: antiquewhite;
+  height: 12%;
 }
 
 .closeUp {
