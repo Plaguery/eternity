@@ -2,7 +2,7 @@ import { refreshInv, showDialogue, closeUp } from "./util.js";
 
 const bgm = new Audio("music/1_bgm.mp3");
 bgm.loop = true;
-bgm.volume = 0.03;
+bgm.volume = 0.2;
 
 document.querySelector("body").addEventListener(
   "click",

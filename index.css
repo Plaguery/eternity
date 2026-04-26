@@ -11,6 +11,9 @@ body {
 
 #play {
   position: absolute;
-  left: 46%;
-  bottom: 04%;
+  left: 45%;
+  bottom: 05%;
+}
+#play img {
+  width: 90%;
 }
