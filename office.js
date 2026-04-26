@@ -3,6 +3,12 @@ const cookies = getCookies();
 const next = document.querySelector("#nextCont");
 const wire = document.querySelector("#wire");
 const snip = new Audio("music/snip.wav");
+
+const bgm = new Audio("music/hum.mp3");
+bgm.loop = true;
+bgm.volume = 0.4;
+bgm.play();
+
 refreshInv();
 showDialogue(
   [
@@ -16,12 +22,7 @@ wire.addEventListener("click", () => {
   if (cookies.scissors) {
     snip.play();
     showDialogue(
-      [
-        "You look at the wire...",
-        "Instantly, you know what you have to do.",
-        "Grabbing your scissors, you decide to snip it.",
-        "Suddenly, everything disappears in a flash of white, and you lose consciousness.",
-      ],
+      ["SNIP.", "Everything disappears in a flash of white."],
       dialog,
       dialogText,
     );

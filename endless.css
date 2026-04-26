@@ -1,3 +1,14 @@
 body {
   background-image: url(assets/5_bg.png);
 }
+
+#phone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#phone img {
+  width: 60%;
+}

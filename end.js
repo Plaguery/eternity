@@ -4,6 +4,10 @@ const cookies = getCookies();
 const door = document.querySelector("#door");
 const dialog = document.querySelector("#dialog");
 const dialogText = document.querySelector("#dialogText");
+const bgm = new Audio("music/wind.mp3");
+bgm.loop = true;
+bgm.volume = 0.4;
+bgm.play();
 showDialogue(
   [
     "That wire seemed important, but you ignore it and move on nonetheless.",
@@ -22,6 +26,8 @@ door.addEventListener("click", () => {
       "YOU ESCAPED: GOOD ENDING",
     ]);
   } else {
+    const eerie = new Audio("music/eerie.mp3");
+    eerie.play();
     showDialogue(
       [
         "You step up to the door, only to realize it's locked.",

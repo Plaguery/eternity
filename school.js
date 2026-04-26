@@ -67,6 +67,9 @@ submit.addEventListener("click", () => {
       dialog,
       dialogText,
     );
+    const unlock = new Audio("music/unlock.mp3");
+    unlock.volume = 0.5;
+    unlock.play();
     //click detector,,,.. pick up scissors
     document.cookie = "scissors=true";
   } else {
