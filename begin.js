@@ -40,18 +40,7 @@ balloons.addEventListener("click", function popBalloon() {
       break;
     case 1:
       balloonImg.style.display = "none";
-      showDialogue(
-        [
-          "...",
-          "Nothing happened.",
-          "You feel kind of bad for popping those balloons.",
-        ],
-        dialog,
-        dialogText,
-      );
-      document.cookie = "pop=true";
       balloons.removeEventListener("click", popBalloon);
-
       break;
   }
   balloonNum -= 1;
@@ -101,9 +90,8 @@ appleButton.addEventListener("click", function bite() {
       apple.setAttribute("src", "assets/1_apple5.png");
       showDialogue(["Item collected!"], dialog, dialogText);
       document.cookie = "key=true";
-      appleButton.style.pointerEvents = "none";
-      refreshInv();
       appleButton.removeEventListener("click", bite);
+      appleButton.style.pointerEvents = "none";
       break;
   }
   bites -= 1;
