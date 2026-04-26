@@ -77,9 +77,4 @@ submit.addEventListener("click", () => {
   }
 });
 
-/* const book = document.querySelector("#test");
-book.addEventListener("click", () => {
-  const bookScene = document.querySelector("#bookCloseUp");
-  const exitBook = document.querySelector("#exitBook");
-  closeUp(bookScene, exitBook);
-}); */
+refreshInv();
